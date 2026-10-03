@@ -1,0 +1,878 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #ffffff;
+
+    color: #111;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+    height: 90px;
+
+    padding: 0 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #129be5;
+
+    color: white;
+}
+
+.header-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.menu-btn {
+    border: none;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.home-btn {
+    display: flex;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.header-right img {
+    width: 42px;
+
+    height: 42px;
+
+    object-fit: contain;
+}
+
+.login-link {
+    margin-left: 5px;
+
+    color: #111;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   PROFILE HERO
+============================== */
+
+.profile-hero {
+    min-height: 650px;
+
+    padding:
+        55px
+        20px
+        0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #129be5 0%,
+            #57b9e9 45%,
+            #ffffff 100%
+        );
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.profile-hero > h1 {
+    margin:
+        0
+        0
+        130px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 43px;
+
+    letter-spacing: 3px;
+
+    color: white;
+
+    -webkit-text-stroke:
+        2px #111;
+
+    text-shadow:
+        3px 3px 0 #111;
+}
+
+
+/* ==============================
+   PROFILE CARD
+============================== */
+
+.profile-card {
+    position: relative;
+
+    width:
+        min(1050px, 92%);
+
+    min-height: 390px;
+
+    margin: 0 auto;
+
+    padding:
+        160px
+        40px
+        30px;
+
+    background: #46c8da;
+
+    border:
+        5px
+        solid white;
+
+    box-shadow:
+        0 0 8px
+        rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==============================
+   MEDAL AVATAR
+============================== */
+
+.medal-avatar {
+    position: absolute;
+
+    top: -145px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.avatar-ring {
+    width: 260px;
+
+    height: 260px;
+
+    padding: 18px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2b900,
+            #fff09a,
+            #d79500
+        );
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.25);
+}
+
+.avatar {
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    border:
+        10px
+        solid #083c8c;
+
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            #fff8a7,
+            #f5d44c 45%,
+            #d59b13
+        );
+
+    outline:
+        5px dotted white;
+
+    outline-offset:
+        -18px;
+}
+
+.laurel {
+    width: 80px;
+
+    color: #e0a916;
+
+    font-size: 40px;
+
+    overflow: hidden;
+}
+
+.left-laurel {
+    transform:
+        rotate(-70deg);
+}
+
+.right-laurel {
+    transform:
+        rotate(70deg);
+}
+
+
+/* ==============================
+   STUDENT INFO
+============================== */
+
+.student-info h2 {
+    margin: 0 0 20px;
+
+    font-family: Arial, "Segoe UI", sans-serif;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+.student-info p {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: left;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: bold;
+}
+
+.student-info p::first-letter {
+    color: blue;
+}
+
+.student-meta {
+    display: block;
+}
+
+/* ==============================
+   STATS
+============================== */
+
+.profile-stats {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 90px;
+}
+
+.stat-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.stat-icon {
+    font-size: 35px;
+}
+
+
+/* ==============================
+   MAIN
+============================== */
+
+.profile-main {
+    width:
+        min(1100px, 92%);
+
+    margin:
+        70px
+        auto;
+}
+
+
+/* ==============================
+   COMMON SECTION
+============================== */
+
+.profile-section,
+.achievement-section {
+    border-radius: 30px;
+
+    background: #0786c9;
+
+    color: white;
+
+    box-shadow:
+        0 5px 9px
+        rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    margin: 0;
+
+    font-size: 25px;
+}
+
+.title-line {
+    width: 140px;
+
+    height: 4px;
+
+    margin-top: 15px;
+
+    background: white;
+}
+
+
+/* ==============================
+   INTRO
+============================== */
+
+.intro-section {
+    min-height: 350px;
+
+    padding: 55px;
+
+    margin-bottom: 70px;
+}
+
+.intro-text {
+    margin-top: 35px;
+
+    line-height: 1.7;
+}
+/* ==============================
+   LỊCH SỬ HOẠT ĐỘNG
+============================== */
+
+.history-section {
+    padding: 45px 55px;
+    margin-bottom: 70px;
+}
+
+.history-list {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* TỪNG HOẠT ĐỘNG */
+
+.history-item {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 22px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+.history-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+
+    transform: translateY(-2px);
+}
+
+
+/* ICON */
+
+.history-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    color: #0786c9;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+
+/* NỘI DUNG */
+
+.history-content {
+    flex: 1;
+}
+
+.history-content h3 {
+    margin: 0 0 6px;
+
+    font-size: 16px;
+}
+
+.history-content p {
+    margin: 0;
+
+    font-size: 14px;
+
+    opacity: 0.9;
+}
+
+
+/* NGÀY */
+
+.history-date {
+    flex-shrink: 0;
+
+    font-size: 13px;
+
+    opacity: 0.8;
+}
+
+
+/* CHƯA CÓ LỊCH SỬ */
+
+.history-empty {
+    padding: 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+
+    opacity: 0.85;
+}
+
+
+/* ==============================
+   ACHIEVEMENT
+============================== */
+
+.achievement-section {
+    padding:
+        55px
+        45px
+        0;
+
+    overflow: hidden;
+}
+
+
+/* ==============================
+   RADAR
+============================== */
+
+.radar-container {
+    width:
+        min(650px, 100%);
+
+    margin:
+        25px
+        auto
+        0;
+}
+
+.radar-chart {
+    width: 100%;
+
+    overflow: visible;
+}
+
+.radar-grid {
+    fill: none;
+
+    stroke: #15374c;
+
+    stroke-width: 1.5;
+}
+
+.radar-chart line {
+    stroke: #15374c;
+
+    stroke-width: 1.5;
+}
+
+.radar-chart text {
+    fill: white;
+
+    font-size: 12px;
+}
+
+.expected-data {
+    fill:
+        rgba(52, 232, 215, 0.08);
+
+    stroke: #38e8d7;
+
+    stroke-width: 3;
+}
+
+.actual-data {
+    fill:
+        rgba(60, 39, 33, 0.05);
+
+    stroke: #493027;
+
+    stroke-width: 4;
+}
+
+
+/* ==============================
+   LEGEND
+============================== */
+
+.radar-legend {
+    width: 450px;
+
+    max-width: 100%;
+
+    margin:
+        0
+        auto
+        70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.radar-legend div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    font-size: 13px;
+}
+
+.legend-line {
+    width: 80px;
+
+    height: 7px;
+}
+
+.legend-line.expected {
+    background: #38e8d7;
+}
+
+.legend-line.actual {
+    background: #493027;
+}
+
+
+/* ==============================
+   ACHIEVEMENT BOX
+============================== */
+
+.achievement-box {
+    margin:
+        0
+        -10px;
+
+    padding:
+        50px
+        70px;
+
+    background: white;
+
+    color: #111;
+
+    border-radius:
+        45px
+        45px
+        0
+        0;
+}
+
+.achievement-box h2 {
+    margin: 0;
+
+    font-size: 27px;
+}
+
+.achievement-title-line {
+    width: 155px;
+
+    height: 4px;
+
+    margin:
+        14px
+        0
+        35px;
+
+    background: #111;
+}
+
+.achievement-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.achievement-item {
+    min-height: 55px;
+
+    padding:
+        0
+        25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #5dadd8;
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    width: 100%;
+
+    margin-top: 90px;
+
+    padding:
+        65px
+        0;
+
+    background: #129be5;
+
+    color: white;
+}
+
+.footer-container {
+    width:
+        min(1100px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr;
+
+    gap: 70px;
+}
+
+.footer-column h3 {
+    font-size: 15px;
+
+    line-height: 1.4;
+}
+
+.footer-column p,
+.footer-column a {
+    display: block;
+
+    margin: 11px 0;
+
+    color: white;
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding:
+            0
+            18px;
+    }
+
+    .header-right img {
+        width: 30px;
+
+        height: 30px;
+    }
+
+    .login-link {
+        display: none;
+    }
+
+    .profile-hero {
+        min-height: 570px;
+    }
+
+    .profile-hero > h1 {
+        margin-bottom: 120px;
+
+        font-size: 32px;
+    }
+
+    .profile-card {
+        width: 100%;
+
+        padding:
+            130px
+            20px
+            25px;
+    }
+
+    .avatar-ring {
+        width: 220px;
+
+        height: 220px;
+    }
+
+    .medal-avatar {
+        top: -120px;
+    }
+
+    .student-info h2 {
+        font-size: 27px;
+    }
+
+    .student-meta {
+        gap: 25px;
+    }
+
+    .profile-stats {
+        gap: 30px;
+    }
+
+    .intro-section,
+    .achievement-section {
+        padding:
+            35px
+            25px;
+    }
+
+    .achievement-section {
+        padding-bottom: 0;
+    }
+
+    .achievement-box {
+        padding:
+            40px
+            25px;
+    }
+
+    .footer-container {
+        grid-template-columns:
+            1fr;
+
+        gap: 30px;
+    }
+
+}
+.update-profile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 230px;
+    height: 48px;
+
+    margin: 28px auto 0;
+
+    background-color: #0786c9;
+    color: white;
+
+    border-radius: 8px;
+    border: 2px solid white;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.update-profile-btn:hover {
+    background-color: #056da5;
+    transform: translateY(-2px);
+}

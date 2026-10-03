@@ -1,0 +1,346 @@
+/* =========================
+   CHECK-IN QR SCANNER
+========================= */
+
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f5f7;
+
+    color: #222;
+}
+
+
+/* =========================
+   TRANG CHECK IN
+========================= */
+
+.checkin-page {
+
+    width: min(92%, 700px);
+
+    margin: 40px auto;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   PHẦN SCANNER
+========================= */
+
+.scanner-section {
+
+    text-align: center;
+}
+
+
+.scanner-section h1 {
+
+    margin: 0 0 12px;
+
+    font-size: 34px;
+}
+
+
+.scanner-description {
+
+    margin-bottom: 25px;
+
+    color: #555;
+}
+
+
+/* =========================
+   CAMERA
+========================= */
+
+.scanner-box {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    aspect-ratio: 1 / 1;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: #111;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+#qrVideo {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   KHUNG QUÉT QR
+========================= */
+
+.scan-frame {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 260px;
+
+    height: 260px;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* 4 GÓC */
+
+.corner {
+
+    position: absolute;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-color: white;
+
+    border-style: solid;
+}
+
+
+/* GÓC TRÊN TRÁI */
+
+.top-left {
+
+    top: 0;
+
+    left: 0;
+
+    border-width:
+        5px 0 0 5px;
+}
+
+
+/* GÓC TRÊN PHẢI */
+
+.top-right {
+
+    top: 0;
+
+    right: 0;
+
+    border-width:
+        5px 5px 0 0;
+}
+
+
+/* GÓC DƯỚI TRÁI */
+
+.bottom-left {
+
+    bottom: 0;
+
+    left: 0;
+
+    border-width:
+        0 0 5px 5px;
+}
+
+
+/* GÓC DƯỚI PHẢI */
+
+.bottom-right {
+
+    right: 0;
+
+    bottom: 0;
+
+    border-width:
+        0 5px 5px 0;
+}
+
+
+/* =========================
+   VẠCH QUÉT
+========================= */
+
+.scan-line {
+
+    position: absolute;
+
+    left: 5%;
+
+    top: 10%;
+
+    width: 90%;
+
+    height: 3px;
+
+    background: #00e889;
+
+    box-shadow:
+        0 0 8px rgba(0, 232, 137, 0.8);
+
+    animation:
+        scan 2s ease-in-out infinite alternate;
+}
+
+
+/* CHUYỂN ĐỘNG VẠCH QUÉT */
+
+@keyframes scan {
+
+    from {
+
+        top: 10%;
+
+    }
+
+    to {
+
+        top: 88%;
+
+    }
+
+}
+
+
+/* =========================
+   THÔNG BÁO CAMERA
+========================= */
+
+#scanStatus {
+
+    margin: 18px 0 0;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   TRẠNG THÁI CHECK-IN
+========================= */
+
+.checkin-status {
+
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+
+.checkin-status h2 {
+
+    margin-bottom: 12px;
+}
+
+
+#statusBox {
+
+    padding: 15px;
+
+    background: #e9ecef;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   NÚT QUAY LẠI
+========================= */
+
+.checkin-actions {
+
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+
+.back-button {
+
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    color: #333;
+
+    text-decoration: none;
+
+    border: 1px solid #333;
+
+    border-radius: 8px;
+}
+
+
+.back-button:hover {
+
+    background: #333;
+
+    color: white;
+}
+
+
+/* =========================
+   ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 600px) {
+
+    .checkin-page {
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 20px 15px;
+    }
+
+
+    .scanner-section h1 {
+
+        font-size: 28px;
+    }
+
+
+    .scan-frame {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Quét QR Check-in sự kiện</title>
+
+    <link rel="stylesheet" href="checkin.css">
+</head>
+
+<body>
+
+    <main class="checkin-page">
+
+        <!-- KHU VỰC QUÉT QR -->
+        <section class="scanner-section">
+
+            <h1>CHECK IN SỰ KIỆN</h1>
+
+            <p class="scanner-description">
+                Đưa mã QR của sự kiện vào trong khung để quét.
+            </p>
+
+            <!-- CAMERA -->
+            <div class="scanner-box">
+
+                <video
+                    id="qrVideo"
+                    autoplay
+                    playsinline
+                    muted>
+                </video>
+
+                <!-- KHUNG NGẮM QR -->
+                <div class="scan-frame">
+
+                    <span class="corner top-left"></span>
+
+                    <span class="corner top-right"></span>
+
+                    <span class="corner bottom-left"></span>
+
+                    <span class="corner bottom-right"></span>
+
+                    <!-- VẠCH QUÉT -->
+                    <div class="scan-line"></div>
+
+                </div>
+
+            </div>
+
+            <p id="scanStatus">
+                Đang khởi động camera...
+            </p>
+
+        </section>
+
+
+        <!-- TRẠNG THÁI CHECK-IN -->
+        <section class="checkin-status">
+
+            <h2>Trạng thái check-in</h2>
+
+            <div id="statusBox">
+                Chưa quét mã QR
+            </div>
+
+        </section>
+
+
+        <!-- QUAY LẠI -->
+        <div class="checkin-actions">
+
+            <a
+                href="index.html"
+                class="back-button">
+                ← Quay lại trang chủ
+            </a>
+
+        </div>
+
+    </main>
+
+
+   <script src="checkin.js"></script>
+
+</body>
+
+</html>
