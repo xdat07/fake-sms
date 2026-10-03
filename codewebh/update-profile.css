@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f7;
+    color: #222;
+}
+
+
+/* =========================
+   TOÀN TRANG
+========================= */
+
+.update-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =========================
+   KHUNG FORM
+========================= */
+
+.update-card {
+    width: 100%;
+    max-width: 800px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   TIÊU ĐỀ
+========================= */
+
+.update-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.update-header h1 {
+    margin: 0 0 10px;
+
+    font-size: 30px;
+    color: #222;
+}
+
+.update-header p {
+    margin: 0;
+
+    font-size: 15px;
+    color: #777;
+}
+
+
+/* =========================
+   FORM 2 CỘT
+========================= */
+
+#updateProfileForm {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.form-group label span {
+    color: #e53935;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+
+    background: #fff;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.form-group input {
+    height: 48px;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 90px;
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #078fd1;
+
+    box-shadow:
+        0 0 0 3px rgba(7, 143, 209, 0.13);
+}
+
+
+/* =========================
+   NÚT
+========================= */
+
+.form-actions {
+
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+
+.cancel-btn,
+.save-btn {
+
+    min-width: 130px;
+
+    height: 46px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+.cancel-btn {
+
+    border: 1px solid #ccc;
+
+    background: white;
+
+    color: #555;
+}
+
+
+.cancel-btn:hover {
+    background: #f2f2f2;
+}
+
+
+.save-btn {
+
+    border: none;
+
+    background: #078fd1;
+
+    color: white;
+}
+
+
+.save-btn:hover {
+    background: #0679b1;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .update-page {
+        padding: 20px 12px;
+        align-items: flex-start;
+    }
+
+    .update-card {
+        padding: 25px 18px;
+        border-radius: 12px;
+    }
+
+    .update-header h1 {
+        font-size: 23px;
+    }
+
+    #updateProfileForm {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .form-actions {
+        grid-column: auto;
+
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+    }
+}
+
+/* =========================
+   MỤC TIÊU CÁ NHÂN
+========================= */
+
+.personal-goals {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e6ea;
+}
+
+.goals-heading {
+    margin-bottom: 20px;
+}
+
+.goals-heading h2 {
+    margin: 0 0 7px;
+    font-size: 20px;
+    color: #222;
+}
+
+.goals-heading p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.goals-grid input[type="number"] {
+    width: 100%;
+    height: 48px;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.goals-grid input[type="number"]:focus {
+    border-color: #078fd1;
+    box-shadow: 0 0 0 3px rgba(7, 143, 209, 0.13);
+}
+
+@media (max-width: 600px) {
+    .personal-goals {
+        grid-column: auto;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* Trường không bắt buộc */
+.optional-text {
+    color: #8a8a8a !important;
+    font-size: 13px;
+    font-weight: 400;
+}
+/* =========================
+   POPUP
+========================= */
+
+.login-popup {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 9999;
+}
+
+.login-popup.show {
+    display: flex;
+}
+
+.login-popup-box {
+    width: 360px;
+    max-width: 90%;
+
+    padding: 30px;
+
+    background: white;
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.login-popup-box p {
+    margin: 0 0 22px;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.login-popup-box button {
+    min-width: 100px;
+
+    padding: 10px 25px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #078fd1;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-popup-box button:hover {
+    background: #0679b1;
+}

@@ -1,0 +1,576 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #ffffff;
+
+    color: #222;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+
+    height: 90px;
+
+    padding: 0 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #129be5;
+
+    color: white;
+}
+
+
+.header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.menu-btn {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+.home-btn {
+
+    font-size: 27px;
+
+    text-decoration: none;
+}
+
+
+.header-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.header-right img {
+
+    width: 42px;
+
+    height: 42px;
+
+    object-fit: contain;
+}
+
+
+.login-link {
+
+    margin-left: 5px;
+
+    color: #111;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+
+/* ==============================
+   MAIN
+============================== */
+
+main {
+
+    width: min(1200px, 92%);
+
+    margin: 35px auto 80px;
+}
+
+
+
+/* ==============================
+   FEATURED EVENT
+============================== */
+
+.featured-event {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.9fr)
+        minmax(350px, 1.1fr);
+
+    gap: 35px;
+
+    padding: 28px;
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 20px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+.featured-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 340px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+
+.featured-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.featured-content h2 {
+
+    margin-top: 0;
+
+    color: #075ec7;
+
+    font-size: 23px;
+
+    line-height: 1.35;
+}
+
+
+.event-info {
+
+    margin: 10px 0 15px;
+}
+
+
+.event-info p {
+
+    display: flex;
+
+    gap: 10px;
+
+    line-height: 1.5;
+}
+
+
+
+/* ==============================
+   REGISTER EVENT
+============================== */
+
+.participant-box {
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-register-btn {
+    width: 100%;
+
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #42c7dc;
+    color: #111;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.event-register-btn:hover {
+    background: #2bb6ca;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   TITLE
+============================== */
+
+.event-title {
+
+    margin: 70px 0 35px;
+
+    text-align: center;
+
+    color: #005ad7;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 44px;
+
+    text-shadow:
+        2px 2px 0 #ddd;
+}
+
+
+
+/* ==============================
+   EVENT LIST
+============================== */
+
+.event-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+
+/* ==============================
+   EVENT CARD
+============================== */
+
+.event-card {
+
+    display: grid;
+
+    grid-template-columns:
+        360px 1fr;
+
+    min-height: 270px;
+
+    overflow: hidden;
+
+    background: #f1f1f1;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 13px
+        rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.event-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 9px 20px
+        rgba(0, 0, 0, 0.2);
+}
+
+
+.event-card > img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 270px;
+
+    object-fit: cover;
+}
+
+
+.card-content {
+
+    position: relative;
+
+    padding: 30px 35px;
+}
+
+
+.card-content h2 {
+
+    margin:
+        15px 0 16px;
+
+    color: #075ec7;
+
+    font-size: 24px;
+}
+
+
+.card-content p {
+
+    margin: 10px 0;
+
+    line-height: 1.45;
+}
+
+
+.description {
+
+    color: #555;
+}
+
+
+
+/* ==============================
+   EVENT STATUS
+============================== */
+
+.event-status {
+
+    display: inline-block;
+
+    padding:
+        7px 13px;
+
+    background: #ef3e3a;
+
+    color: white;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+
+/* ==============================
+   DETAIL BUTTON
+============================== */
+
+.detail-btn {
+
+    display: inline-block;
+
+    margin-top: 13px;
+
+    padding:
+        11px 22px;
+
+    background: #47cadc;
+
+    color: #111;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.detail-btn:hover {
+
+    background: #2bb6ca;
+}
+
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 50px 0;
+
+    background: #159dde;
+    color: white;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   TABLET / MOBILE
+============================== */
+
+@media (max-width: 800px) {
+
+    .header {
+
+        padding:
+            0 18px;
+    }
+
+
+    .header-right img {
+
+        width: 32px;
+
+        height: 32px;
+    }
+
+
+    .login-link {
+
+        display: none;
+    }
+
+
+    main {
+
+        width: 92%;
+    }
+
+
+    .featured-event {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .featured-image img {
+
+        min-height: 260px;
+    }
+
+
+    .event-title {
+
+        margin-top: 50px;
+
+        font-size: 36px;
+    }
+
+
+    .event-card {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .event-card > img {
+
+        height: 230px;
+
+        min-height: 0;
+    }
+
+
+    .card-content {
+
+        padding: 25px;
+    }
+
+}
+
+
+
+/* ==============================
+   MOBILE NHỎ
+============================== */
+
+@media (max-width: 480px) {
+
+    .header {
+
+        height: 70px;
+    }
+
+
+    .header-right {
+
+        gap: 5px;
+    }
+
+
+    .header-right img {
+
+        width: 27px;
+
+        height: 27px;
+    }
+
+
+    .featured-event {
+
+        padding: 15px;
+
+        border-radius: 15px;
+    }
+
+
+    .featured-content h2 {
+
+        font-size: 18px;
+    }
+
+
+    .event-title {
+
+        font-size: 31px;
+    }
+
+
+    .card-content h2 {
+
+        font-size: 20px;
+    }
+
+}
